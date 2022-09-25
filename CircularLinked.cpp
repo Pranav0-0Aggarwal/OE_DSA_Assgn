@@ -2,13 +2,10 @@
 
 #include <iostream>
 using namespace std;
-//Creating Node class
 class Node{
-    //Creating class objects
     public:
     int data;
     Node*next;
-    //Calling Node constructor
     Node(int data){
         this->data=data;
         next=NULL;
@@ -19,7 +16,7 @@ void append(Node*&head,int data){
     Node*temp=head;
     Node*new_node=new Node(data);
     if(temp==NULL){head=new_node;new_node->next=head;return;}
-    while(temp->next!=head){temp=temp->next;}   //This condition establishes that the traversing element(temp) has reached the first element
+    while(temp->next!=head){temp=temp->next;}
     temp->next=new_node;
     new_node->next=head;
 }
